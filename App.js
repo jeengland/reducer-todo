@@ -8,7 +8,7 @@ const App = () => {
     return (
         <React.Fragment>
             <TodoForm dispatch={dispatch} />
-            <TodoList todos={todos} />
+            <TodoList todos={todos} dispatch={dispatch} />
         </React.Fragment>
     )
 }
