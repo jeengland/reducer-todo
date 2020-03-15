@@ -11,10 +11,11 @@ const TodoForm = (props) => {
     }
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor='newTodo'>New Todo
+            <label htmlFor='newTodo'>New Todo: 
                 <input onChange={handleChange} value={newTodo} name='newTodo' id='newTodo' type='text' placeholder='Take out the trash' />
             </label>
             <input type='submit' />
+            <button type='button' onClick={() => props.dispatch({type: 'CLEAR'})}>Clear</button>
         </form>
     )
 }
