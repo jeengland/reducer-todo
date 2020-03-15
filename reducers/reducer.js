@@ -1,4 +1,4 @@
-initialState = [
+const initialState = [
     {
         item: 'Build a simple reducer and initial state',
         completed: false,
@@ -37,5 +37,5 @@ const reducer = (state, action) => {
             return state;
     }
 }
-   
-export default [initialState, reducer];
+
+export { initialState, reducer };
