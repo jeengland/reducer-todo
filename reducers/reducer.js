@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 const initialState = [
     {
         item: 'Build a simple reducer and initial state',
@@ -38,7 +40,11 @@ const reducer = (state, action) => {
         case 'TOGGLE':
             return state.map((todo) => {
                 if (todo.id === action.id) {
-                    return {...todo, completed: !todo.completed}
+                    if (todo.completed) {
+                        return {...todo, completed: !todo.completed, time: undefined};
+                    } else {
+                        return {...todo, completed: !todo.completed, time: moment()};
+                    }
                 } else return todo;
             })
         case 'CLEAR': 
