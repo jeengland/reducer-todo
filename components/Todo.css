@@ -1,0 +1,21 @@
+li {
+    white-space: nowrap;
+}
+
+span {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+time {
+    text-decoration: none !important;
+}
